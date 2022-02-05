@@ -46,8 +46,14 @@ def solution(new_id):
     st = new_id
     st = st.lower()
     st = re.sub('[^a-z0-9\-_.]', '', st)
+    # re.sub => 첫번째 파라미터에 해당하는 문자를 두번째 파라미터로 대체
+    # [^string]: 피해야할 문자들의 집합
+    # \는 escaped character로 다음에 오는 문자들이 특수문자임을 알려준다.
+    
     st = re.sub('\.+', '.', st)
     st = re.sub('^[.]|[.]$', '', st)
+    # | => or
+    
     st = 'a' if len(st) == 0 else st[:15]
     st = re.sub('^[.]|[.]$', '', st)
     st = st if len(st) > 2 else st + "".join([st[-1] for i in range(3-len(st))])
