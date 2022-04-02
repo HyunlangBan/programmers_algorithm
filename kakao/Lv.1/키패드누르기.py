@@ -13,7 +13,7 @@ def move(p, e):
                 q.append(s+m)
 
 def solution(numbers, hand):
-    # numbers = list(map(int, numbers))
+    numbers = list(map(int, numbers))
     answer = ''
     left = [1, 4, 7]
     right = [3, 6, 9]
