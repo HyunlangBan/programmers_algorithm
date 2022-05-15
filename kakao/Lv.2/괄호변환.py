@@ -84,3 +84,6 @@ def solution(p):
         return p
 
     return process(p)
+
+
+### 닫는 괄호 갯수가 여는 괄호보다 많으면 올바른 괄호 문자열이 아니다!
